@@ -1,0 +1,185 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  padding: 12px 24px;
+  min-width: 100px;
+  min-height: 44px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* STANDARD VARIANT */
+.btn--standard {
+  background-color: #b6b6b6;
+  border: 3px solid #636363;
+  color: black;
+}
+
+.btn--standard:hover:not(.btn--disabled) {
+  background-color: #dddcdc;
+  border-color: #b6b6b6;
+}
+
+.btn--standard:active:not(.btn--disabled) {
+  background-color: #8b8b8b;
+  border-color: #444444;
+}
+
+/* SUCCESS VARIANT */
+.btn--success {
+  background-color: #10b981;
+  color: white;
+}
+
+.btn--success:hover:not(.btn--disabled) {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn--success:active:not(.btn--disabled) {
+  background-color: #047857;
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.4);
+}
+
+/* ERROR VARIANT */
+.btn--error {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn--error:hover:not(.btn--disabled) {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.btn--error:active:not(.btn--disabled) {
+  background-color: #b91c1c;
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.4);
+}
+
+/* SUCCESS OUTLINED VARIANT */
+.btn--successOutlined {
+  background-color: transparent;
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.btn--successOutlined:hover:not(.btn--disabled) {
+  background-color: #10b981;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.btn--successOutlined:active:not(.btn--disabled) {
+  background-color: #059669;
+  border-color: #059669;
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+/* ERROR OUTLINED VARIANT */
+.btn--errorOutlined {
+  background-color: transparent;
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.btn--errorOutlined:hover:not(.btn--disabled) {
+  background-color: #ef4444;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+.btn--errorOutlined:active:not(.btn--disabled) {
+  background-color: #dc2626;
+  border-color: #dc2626;
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
+}
+
+/* GO TO VARIANT (для ссылок или действий перехода) */
+.btn--goTo {
+  background-color: #8b5cf6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.btn--goTo:hover:not(.btn--disabled) {
+  background-color: #7c3aed;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.3);
+}
+
+.btn--goTo:active:not(.btn--disabled) {
+  background-color: #6d28d9;
+  transform: translateY(0) scale(1);
+  box-shadow: 0 3px 8px rgba(139, 92, 246, 0.4);
+}
+
+/* DISABLED STATE */
+.btn--disabled {
+  background-color: #9ca3af !important;
+  border-color: #9ca3af !important;
+  color: #6b7280 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+  opacity: 0.6;
+}
+
+/* FOCUS STATES для доступности .btn:focus:not(.btn--disabled) {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.btn--success:focus:not(.btn--disabled),
+.btn--successOutlined:focus:not(.btn--disabled) {
+  outline-color: #10b981;
+}
+
+.btn--error:focus:not(.btn--disabled),
+.btn--errorOutlined:focus:not(.btn--disabled) {
+  outline-color: #ef4444;
+}
+
+.btn--goTo:focus:not(.btn--disabled) {
+  outline-color: #8b5cf6;
+} */
+
+/* Ripple effect (опционально) */
+/* .btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+} */
+
+.btn:active:not(.btn--disabled)::after {
+  width: 100%;
+  height: 100%;
+}
