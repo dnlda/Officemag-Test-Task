@@ -3,14 +3,18 @@ import Header from "./components/layout/Header";
 
 const Layout = () => {
   return (
-    <div
-      style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
-    >
+    <>
       <Header />
-      <main style={{ flex: 1 }}>
+      <main
+        style={{
+          margin: "0 auto",
+          padding: "0 2rem",
+          textAlign: "start",
+        }}
+      >
         <Outlet />
       </main>
-    </div>
+    </>
   );
 };
 

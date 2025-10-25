@@ -15,6 +15,9 @@ const Header = () => {
         zIndex: 10,
         boxSizing: "border-box",
         width: "100%",
+        minWidth: "100%",
+        left: 0,
+        right: 0,
       }}
     >
       <div
@@ -25,9 +28,15 @@ const Header = () => {
           gap: "15px",
         }}
       >
-        <Link to={"/text_page"}>Текст</Link>
-        <Link to={"/form_page"}>Форма</Link>
-        <Link to={"/buttons_variant_page"}>Кнопки</Link>
+        <Link style={{ color: "white" }} to={"/text_page"}>
+          Текст
+        </Link>
+        <Link style={{ color: "white" }} to={"/form_page"}>
+          Форма
+        </Link>
+        <Link style={{ color: "white" }} to={"/buttons_variant_page"}>
+          Кнопки
+        </Link>
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
+import Form from "../../components/feature/Form";
+
 const FormPage = () => {
-  return <div>Form</div>;
+  return <Form />;
 };
 
 export default FormPage;
