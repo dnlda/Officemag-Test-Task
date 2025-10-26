@@ -15,7 +15,7 @@ export interface ButtonProps {
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   isDisabled?: boolean;
   className?: string;
-  children?: React.ReactNode;
+  icon?: React.ReactNode;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -24,14 +24,15 @@ const Button: React.FC<ButtonProps> = ({
   title,
   onClick,
   className = "",
-  children,
+  icon,
 }) => {
   const baseClass = "btn";
   const variantClass = `btn--${variant}`;
   const disabledClass = isDisabled ? "btn--disabled" : "";
+  const withIconClass = icon ? "btn--with-icon" : "";
 
   const buttonClass =
-    `${baseClass} ${variantClass} ${disabledClass} ${className}`.trim();
+    `${baseClass} ${variantClass} ${disabledClass} ${withIconClass} ${className}`.trim();
 
   return (
     <button
@@ -41,7 +42,8 @@ const Button: React.FC<ButtonProps> = ({
       aria-label={title}
       className={buttonClass}
     >
-      {children || title}
+      {icon}
+      {title}
     </button>
   );
 };

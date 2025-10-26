@@ -18,7 +18,7 @@ const Form = () => {
   };
 
   return (
-    <div style={{ margin: "0 300px" }}>
+    <div style={{ margin: "0 300px", maxWidth: "600px" }}>
       <div
         style={{
           display: "flex",

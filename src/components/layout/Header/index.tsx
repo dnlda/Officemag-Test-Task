@@ -37,6 +37,15 @@ const Header = () => {
         <Link style={{ color: "white" }} to={"/buttons_variant_page"}>
           Кнопки
         </Link>
+        <Link style={{ color: "white" }} to={"/showcase_page"}>
+          Витрина
+        </Link>
+        <Link style={{ color: "white" }} to={"/black_page"}>
+          Черная страница
+        </Link>
+        <Link style={{ color: "white" }} to={"/beauty_page"}>
+          Красота
+        </Link>
       </div>
     </div>
   );

@@ -1,0 +1,33 @@
+.showcase-scroll-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  padding: 20px 0;
+  cursor: grab;
+  scrollbar-color: #800000 transparent;
+}
+
+.showcase-scroll-container::-webkit-scrollbar {
+  height: 40px;
+}
+
+.showcase-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 0;
+}
+
+.showcase-scroll-container::-webkit-scrollbar-thumb {
+  background: #800000;
+  border-radius: 0;
+  border: none;
+}
+
+.showcase-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #660000;
+}
+
+.showcase-scroll-container::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
